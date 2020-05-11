@@ -66,8 +66,7 @@ print balance:
 $ cleos -v push action cats4 printbal '[ "" ]' -p cats4@active
 ```
 
-## [Acceptance Criteria 1](#Acceptance%20Criteria%201)
-add new category:
+add new category [Acceptance Criteria 1](#Acceptance-Criteria-1):
 ```
 $ cleos -v push action cats4 addtype '[ "checking" ]' -p cats4@active
 ```
@@ -82,8 +81,7 @@ print categiries
 $ cleos -v push action cats4 listtypes '[ "" ]' -p cats4@active
 ```
 
-## [Acceptance Criteria 2](#Acceptance%20Criteria%202)
-transfer between categories:
+transfer between categories [Acceptance Criteria 2](#Acceptance-Criteria-2):
 ```
 $ cleos -v push action cats4 transfer '[ "cats4", "default", "cats4", "checking", "5.0000 SYS", "m" ]' -p cats4@active
 $ cleos -v push action cats4 transfer '[ "cats4", "checking", "cats4", "default", "1.0000 SYS", "m" ]' -p cats4@active
@@ -94,8 +92,7 @@ print balance:
 $ cleos -v push action cats4 printbal '[ "" ]' -p cats4@active
 ```
 
-## [Acceptance Criteria 3](#Acceptance%20Criteria%203)
-transfer from default account:
+transfer from default account [Acceptance Criteria 3](#Acceptance-Criteria-3):
 ```
 $ cleos -v push action cats4 transfer '[ "cats4", "default", "alice", "", "5.0000 SYS", "m" ]' -p cats4@active
 ```
