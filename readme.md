@@ -12,23 +12,23 @@ This kata assumes knowledge of setting up a basic single node test net and deplo
 As a user, I can define the categories used to sub-divide my token balance.
 
 ## Acceptance Criteria 1
-1. A user must be able to create new categories where each category:
-   is defined by a unique human readable string
-   is associated with an automatically generated numeric unique ID
-2. A user must be able to retrieve a listing of existing categories
-   the listing must display both the ID and human readable string
-   There is no restriction placed on how the listing is assembled or displayed
+1. A user must be able to create new categories where each category:  
+   is defined by a unique human readable string  
+   is associated with an automatically generated numeric unique ID  
+2. A user must be able to retrieve a listing of existing categories  
+   the listing must display both the ID and human readable string  
+   There is no restriction placed on how the listing is assembled or displayed  
 3. An action that attempts to duplicate a category must fail objectively
 4. As a user, I can re-categorize any quantity of SYS tokens in my account from one category to another.
 
 ## Acceptance Criteria 2
-1. As a user i can issue an action that categorizes un-categorized or "default" tokens into a certain category bucket provided:
-   that quantity of SYS tokens exists in an uncategorized or default state on the account
-2. As a user i can issue an action that re-categorizes tokens from one category to another provided:
-   the current category's balance is greater than or equal to the quantity of SYS tokens being re-categorized
-3. A user must be able to retrieve a listing of existing category balances, including a default or un-categorized entry
-   the listing must display the human readable category string
-   There is no restriction placed on how the listing is assembled or displayed
+1. As a user i can issue an action that categorizes un-categorized or "default" tokens into a certain category bucket provided:  
+   that quantity of SYS tokens exists in an uncategorized or default state on the account  
+2. As a user i can issue an action that re-categorizes tokens from one category to another provided:  
+   the current category's balance is greater than or equal to the quantity of SYS tokens being re-categorized  
+3. A user must be able to retrieve a listing of existing category balances, including a default or un-categorized entry  
+   the listing must display the human readable category string  
+   There is no restriction placed on how the listing is assembled or displayed  
 4. As a user, I am protected from eosio.token::transfer actions which send more SYS tokens than my un-categorized or "default" balance
 
 ## Acceptance Criteria 3
