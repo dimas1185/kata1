@@ -128,22 +128,6 @@ public:
     }
 
     [[eosio::action]]
-    void deposit(name from, name to, name type, asset balance)
-    {
-        require_auth(from);
-        check(get_self() == to || get_self() == from, "transfer should be either from this account or to this account");
-
-        action{
-            permission_level{get_self(), "active"_n},
-            "eosio.token"_n,
-            "transfer"_n,
-            std::make_tuple(get_self(), to, balance, std::string("kata1 deposit"))
-        }.send();
-
-        updateBalance(get_self(), type, balance);
-    }
-
-    [[eosio::action]]
     void transfer(name from, name from_type, name to, name to_type, asset balance)
     {
         require_auth(from);
