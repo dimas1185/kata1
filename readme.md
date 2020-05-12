@@ -103,11 +103,6 @@ print balance:
 $ cleos -v push action cats4 printbal '[ "" ]' -p cats4@active
 ```
 
-print balance:
-```
-$ cleos -v push action cats4 printbal '[ "" ]' -p cats4@active
-```
-
 trying to overdraft:
 ```
 $ cleos push action eosio.token transfer '[ "cats4", "alice", "20.0000 SYS", "m" ]' -p cats4@active
