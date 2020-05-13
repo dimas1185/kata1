@@ -116,8 +116,6 @@ public:
         print("deposit called(", get_self(), "): ", from, ", ", to, ", balance=", balance, ", ", memo, "\n");
         if (to != get_self() && from != get_self())
             return;
-        
-        //check(to == get_self(), "use kata1::deposit instead");
 
         check(balance.amount > 0, "zero quantity, aborting");
 
@@ -148,5 +146,17 @@ public:
                 std::make_tuple(get_self(), to, balance, std::string("kata1 transfer"))
             }.send();
         }
+    }
+
+    [[eosio::action]]
+    void verify(name type, asset balance)
+    {
+        require_auth(get_self());
+
+        acc_table types(get_self(), get_self().value);
+        
+        auto it_c = types.find(type.value);
+        check(it_c != types.end(), "account type not found");
+        check(it_c->balance.amount == balance.amount, "wrong balance!");
     }
 };
