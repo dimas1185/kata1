@@ -6,9 +6,10 @@ include(ExternalProject)
 
 # if no cdt root is given use default path
 if(EOSIO_CDT_ROOT STREQUAL "" OR NOT EOSIO_CDT_ROOT)
-    find_package(eosio.cdt)
+    find_package(eosio.cdt PATHS ${CMAKE_SOURCE_DIR}/../eosio.cdt/build )
 endif()
 message("EOSIO_CDT_ROOT = ${EOSIO_CDT_ROOT}")
+#find_package( eosio.cdt PATHS ${CMAKE_SOURCE_DIR}/../eosio.cdt/build/modules )
 
 ExternalProject_Add(
         kata1_project
