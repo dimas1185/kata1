@@ -107,3 +107,5 @@ trying to overdraft:
 ```
 $ cleos push action eosio.token transfer '[ "cats4", "alice", "20.0000 SYS", "m" ]' -p cats4@active
 ```
+
+See deffered usage examples in [kata1_test.cpp](tests/kata1_test.cpp)
