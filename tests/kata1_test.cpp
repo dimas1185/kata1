@@ -342,6 +342,12 @@ BOOST_AUTO_TEST_CASE(post) try {
         mutable_variant_object
         ("number", 1)
     );
+    t.push_action(
+        N(kata1), N(verify), N(kata1),
+        mutable_variant_object
+        ("type", "default")
+        ("balance", "55.0000 SYS")
+    );
     t.produce_blocks();
     BOOST_CHECK_THROW(
         [&] {
