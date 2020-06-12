@@ -216,19 +216,6 @@ public:
     }
 
     [[eosio::action]]
-    void init()
-    {
-        auto it = m_types.find(def_account.value);
-        if (it == m_types.end())
-        {
-            m_types.emplace(get_self(), [&](auto &row) {
-                row.type = def_account;
-                row.balance = eosio::token::get_balance("eosio.token"_n, get_self(), symbol_code("SYS"));
-            });
-        }
-    }
-
-    [[eosio::action]]
     void addtype(name type)
     {
         require_auth(get_self());
